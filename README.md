@@ -3,14 +3,16 @@
 
 # Что ещё можно было бы сделать:
 - Добавить lock_guard на изменение статуса потока
+- Настройка графика для недопущения отрисовки точек "на границе"
+
+# Использованные библиотеки
+QCustomPlot для версии Qt 5.12.2.
 
 # Standalone .exe
 libgcc_s_seh-1.dll
 libstdc++-6.dll
-libwinpthread-1.dll
 Qt5Core.dll
 Qt5Gui.dll
-Qt5Sql.dll
+Qt5PrintSupport.dll
 Qt5Widgets.dll
 platforms/qwindows.dll
-sqldrivers/qsqlite.dll
