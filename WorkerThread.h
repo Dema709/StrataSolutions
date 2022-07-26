@@ -5,6 +5,7 @@
 #include <QObject>
 #include <QPoint>
 #include <QVector>
+#include <atomic>
 
 //Поток генерации значений
 class WorkerThread : public QThread
@@ -35,7 +36,7 @@ signals:
     void GeneratedNewPointsSignal(QVector<QPointF> points);
 
 private:
-    Status m_pStatus = Status::NotStarted;
+    std::atomic<Status> m_pStatus = {Status::NotStarted};
 
     //Период геренации массива значений, мс
     size_t m_renderingPeriod = 1000;
